@@ -1,4 +1,4 @@
-# Long-term Vehicle Localization in Urban Environments Based on Pole Landmarks Extracted from 3-D LiDAR Scans
+# Long-term Vehicle Localization in Urban Environments Based on Pole Landmarks Extracted from 3D LiDAR Scans
 
 Schaefer, A., Büscher, D., Vertens, J., Luft, L., & Burgard, W. (2021). Long-term vehicle localization in urban environments based on pole landmarks extracted from 3-D lidar scans. _Robotics and Autonomous Systems_, 136, 103709.
 
