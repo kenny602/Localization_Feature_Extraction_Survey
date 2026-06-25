@@ -2,6 +2,7 @@
 
 Ma, W., Yin, H., Wong, P. J. Y., Wang, D., Sun, Y., & Su, Z. (2025). TripletLoc: One-shot global localization using semantic triplet in urban environments. _IEEE Robotics and Automation Letters_, 10(2), 1569-1576.
 
+- **분류** : Place Recognition
 ---
 
 ## Abstract
