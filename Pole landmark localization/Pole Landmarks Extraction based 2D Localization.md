@@ -2,6 +2,10 @@
 
 Schaefer, A., Büscher, D., Vertens, J., Luft, L., & Burgard, W. (2021). Long-term vehicle localization in urban environments based on pole landmarks extracted from 3-D lidar scans. _Robotics and Autonomous Systems_, 136, 103709.
 
+- **게재처**: RAS
+- **연도**: 2021
+- **분류**: Landmark (Pole)
+
 ---
 
 ## Abstract
