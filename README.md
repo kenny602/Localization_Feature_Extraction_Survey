@@ -28,6 +28,7 @@
 | ④ | **Segment / Semantic / Graph** (세그먼트·의미·그래프) | 세그먼트 · 인스턴스 객체 · 그래프 | 고수준 객체/관계를 descriptor로 | SegMatch, TripletLoc, STD, BTC |
 | ⑤ | **Projection-based** (투영 기반) | BEV · range image · spherical | 2D 투영 후 영상 descriptor 적용 | Scan Context++, M2DP, OverlapNet |
 | ⑥ | **Landmark-based** (랜드마크 기반) | pole · tree · 구조물 | 시간 불변 랜드마크를 맵으로 | Pole(Schaefer), TreeLoc |
+| ⑦ | **Dense Cell-Occupancy Residual** (Occupancy Cell의 probability와 intensity residual을 optimize |
 
 ### 범주별 특성 비교
 
@@ -39,6 +40,7 @@
 | ④ 세그먼트·의미·그래프 | 고수준 | 중(분할 품질 의존) | **높음(안정 클래스 선택)** | 작음 | 분할 비용 |
 | ⑤ 투영 기반 | 투영 손실 | 중 | 중 | 작음 | **빠름(2D CNN)** |
 | ⑥ 랜드마크 | 희소 | **낮음(모달리티 추상화)** | **높음(시간 불변)** | **매우 작음** | 빠름 |
+| ⑦ Occupancy Cell의 probability와 intensity residual을 optimize | 높음(dense) | 중(intensity 민감) | 높음(맵 갱신) | 큼(dense map) | 중
 
 > 위 표는 정성적 경향이며 개별 기법에 따라 달라질 수 있다.
 
@@ -93,6 +95,16 @@
 |---|---|---|---|---|
 | `6_Landmark-based/Pole-Landmark-Localization.md` | Long-term Vehicle Localization Based on Pole Landmarks | Robotics and Autonomous Systems | 2021 | ✅ |
 | `6_Landmark-based/TreeLoc.md` | TreeLoc: 6-DoF LiDAR Global Localization in Forests | arXiv | 2026 | ⬜ |
+
+### ⑦ Dense Cell-Occupancy Residual (특징 비추출·대비 섹션)
+
+| 파일 | 논문 | 게재처 | 연도 | 상태 |
+|---|---|---|---|---|
+| '7_Dense-CellOccupancy-Residual/LIO-Aided-Localization.md' | LiDAR Inertial Odometry Aided Robust LiDAR Localization System in Changing City Scenes | ICRA | 2020 | ✅ |
+
+0 Reference Surveys
+
+파일논문게재처연도상태0_Reference-Surveys/Global-LiDAR-Localization-Survey.mdA Survey on Global LiDAR Localization: Challenges, Advances and Open ProblemsIJCV2024⬜0_Reference-Surveys/LPR-Survey.mdLiDAR-based Place Recognition for Autonomous Driving: A SurveyACM CSUR2024⬜
 
 ### 0 Reference Surveys
 | 파일 | 논문 | 게재처 | 연도 | 상태 |
