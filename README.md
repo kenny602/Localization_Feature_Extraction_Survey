@@ -1,7 +1,7 @@
 # Localization Feature Extraction Survey
 
-> A curated survey of **feature extraction methods for localization** (LiDAR / Camera / Radar).
-> 자율주행·로보틱스 위치추정(Localization)에서 사용되는 **특징(feature) 추출 기법**을 정리한 기술조사 저장소입니다.
+> A curated survey of **feature extraction methods for localization**
+> LiDAR 기반 Localization에서 사용되는 **특징(feature) 추출 기법**을 정리한 기술조사 저장소입니다.
 
 **Maintainer:** [@kenny602](https://github.com/kenny602)
 **Status:** 🚧 Work in progress · **Last updated:** 2026-06-25
