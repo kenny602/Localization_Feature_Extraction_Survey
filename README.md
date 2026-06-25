@@ -100,7 +100,7 @@
 
 | 파일 | 논문 | 게재처 | 연도 | 상태 |
 |---|---|---|---|---|
-| '7_Dense-CellOccupancy-Residual/LIO-Aided-Localization.md' | LiDAR Inertial Odometry Aided Robust LiDAR Localization System in Changing City Scenes | ICRA | 2020 | ✅ |
+| '7_Dense-Cell-Occupancy-Residual/LIO-Aided-Localization.md' | LiDAR Inertial Odometry Aided Robust LiDAR Localization System in Changing City Scenes | ICRA | 2020 | ✅ |
 
 0 Reference Surveys
 
