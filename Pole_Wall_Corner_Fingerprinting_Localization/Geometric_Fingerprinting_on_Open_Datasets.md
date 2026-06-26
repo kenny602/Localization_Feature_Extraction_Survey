@@ -4,6 +4,11 @@ Steinke, N., Ritter, C.-N., Goehring, D., & Rojas, R. (2021). Robust LiDAR featu
 
 ---
 
+<img width="1015" height="1101" alt="image" src="https://github.com/user-attachments/assets/96b5d773-6e2c-4e55-93c3-8bed248c8e20" />
+
+
+---
+
 ## Abstract
 
 본 연구는 자율주행 차량을 위한 **특징 기반 localization**으로, 베를린 시의 **공개 데이터(open GIS)** 로 생성한 feature map에 LiDAR가 검출한 특징을 **기하 fingerprinting**으로 강건하게 연관시킨다. pole류(나무·신호등·표지판·가로등)·벽·건물 코너처럼 도시에 흔하고 검출이 쉬우며 시간/계절에 불변한 특징을 사용한다. 핵심 기여는 **여러 해 지난 부정확한 공개 지도에서도** 누락/추가된 특징에 강건하게 정합되는 fingerprint 매칭(데이터 연관) 알고리즘이다. IMU(선택)·차량 오도메트리·대략적 초기 pose만으로 평균 lateral 오차 7.3 cm를 달성해 고가 GNSS를 능가했고, 360° 스캔당 44.7 ms로 실시간 동작한다.
