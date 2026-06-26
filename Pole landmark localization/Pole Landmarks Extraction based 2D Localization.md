@@ -8,6 +8,11 @@ Schaefer, A., Büscher, D., Vertens, J., Luft, L., & Burgard, W. (2021). Long-te
 
 ---
 
+<img width="1238" height="558" alt="image" src="https://github.com/user-attachments/assets/ceb4ba73-8103-4af4-912b-0855a8840eee" />
+
+
+---
+
 ## Abstract
 
 기둥형 객체(pole-like object)는 도시 환경에 흔하고 장기적으로 안정적이어서 차량 위치추정용 랜드마크로 적합하다. 본 연구는 3D LiDAR에서 추출한 **pole 랜드마크 기반의 완전한 매핑·장기 위치추정 시스템**을 제안한다. 새로운 pole 검출기, 매핑 모듈, 온라인 위치추정 모듈로 구성되며 오픈소스로 공개된다. 초기 맵만으로 **15개월**에 걸쳐 도심에서 이동 로봇을 위치추정하며, 경로·날씨·계절 변화와 공사 구간에 대응하는 장기 신뢰성을 입증하고, 기존 SOTA 대비 정확도 우위를 보였다.
