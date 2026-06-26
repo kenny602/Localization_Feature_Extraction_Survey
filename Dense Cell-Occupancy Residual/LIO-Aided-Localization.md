@@ -6,6 +6,10 @@ Ding, W., Hou, S., Gao, H., Wan, G., & Song, S. (2020). LiDAR inertial odometry 
 
 ---
 
+<img width="900" height="492" alt="image" src="https://github.com/user-attachments/assets/a29aa645-bc9f-4f62-a3aa-88a04ed8ca04" />
+
+---
+
 ## Abstract
 
 자율주행에서 환경 변화(재포장·웅덩이·눈·벽 신축/철거 등)는 online 측정 정합 기반 localization을 자주 실패시킨다. 본 논문은 **LiDAR-Inertial Odometry(LIO)** 기반의 dead-reckoning과 **전역 매칭(LGM)** 을 상보적으로 융합하여, 변화하는 도시 환경에서도 정확하고 매끄러운 위치추정을 유지하는 강건한 시스템을 제안한다.
