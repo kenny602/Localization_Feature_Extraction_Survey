@@ -51,7 +51,7 @@ IMU preintegration edge, LiDAR odometry edge, 그리고 **가중된($W$) prior s
 1. 첫 keyframe $F^b_{co}$의 각 점 $\delta_k=\{x_k,y_k,z_k\}$을 극좌표 $\sigma_k=\{\rho_k,\theta_k,z_k\}$로 변환 ($\rho_k=\sqrt{x_k^2+y_k^2}$, $\theta_k=\arctan(y_k/x_k)$).
 2. 방위각 $N_a=60$ sector × 반경 $N_r=20$ ring으로 균등 분할. 각 segment는 **법선 방향 $\vec{n}_{ij}$와 최대 높이 $\max z_k$** 로 기술된다:
 
-$$S_{ij} = \Big\{(\vec{n}_{ij},\ \max_{\sigma_k\in S_{ij}} z_k)\ \Big|\ \tfrac{i\cdot L_{max}}{N_r}\le\rho_k<\tfrac{(i+1)L_{max}}{N_r},\ \tfrac{j\cdot 2\pi}{N_a}\le\theta_k<\tfrac{(j+1)2\pi}{N_a}\Big\}$$
+<img width="807" height="80" alt="image" src="https://github.com/user-attachments/assets/ae8e6bdd-c5c6-43bc-8885-28e625c10a84" />
 
 3. prior submap의 모든 keyframe에도 같은 처리를 해 후보 집합 $V^a_{co}$를 만들고, **행렬 차이(XOR) 최소** 기준으로 최적 keyframe을 고른다: $F^a_{best}=\min_{F^a_t\in M^a_{co}} \text{XOR}(F^b_{co}, F^a_t)$.
 4. **ICP**로 정밀 초기 pose $T^b_{init}$을 얻는다.
