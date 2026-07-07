@@ -3,7 +3,7 @@
 - **저자**: Yixin Fang, Yanyan Li, Kun Qian, Federico Tombari, Yue Wang, Gim Hee Lee
 - **게재처**: IEEE ICRA 2025
 - **분류**: 프레임워크(사전 맵 기반 지속 localization / lifelong). 단계별로 서로 다른 특징 표현을 혼용 —
-  초기화는 **⑤ Projection-based**(극좌표 descriptor), scan-to-scan matching은 point-to-plane, scan-to-map matching은 **② Voxel/Distribution-based**(NDT), 맵 표현은 **raw keyframe submap + pose graph**
+  초기화는 **⑤ Projection-based**(극좌표 descriptor), scan-to-scan matching은 **point-to-plane**, scan-to-map matching은 **Voxel/Distribution-based**(NDT), 맵 표현은 **raw keyframe submap + pose graph**
 - **코드**: https://github.com/Yixin-F/LiLoc
 
 > **survey 관점 메모**: LiLoc은 corner line / planar surface 같은 기하 primitive를 새로 제안하는 특징 추출 논문이 **아니다**. 기여의 중심은 "prior map이 시간이 지남에 따라 달라지므로, **환경 변화로 인한 현재 스캔-지도 간 불일치를 고려해서 지도까지 갱신하는 위치인식**"라는 것에 있다. 그럼에도 본 조사에 포함하는 이유는, (1) LSMCL과 동일한 문제 설정(사전 맵 위 **지속적** global localization)을 factor graph로 푸는 대표 사례이고, (2) 단계별로 어떤 LiDAR 표현을 선택했는지가 특징 표현 선택의 좋은 비교 축이 되기 때문이다. 단, ILM에서 사전 맵을 갱신·확장하므로 순수 localization이 아니라 **lifelong(multi-session) SLAM과의 경계**에 걸쳐 있다.
