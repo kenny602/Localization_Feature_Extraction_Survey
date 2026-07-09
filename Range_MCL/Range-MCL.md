@@ -5,6 +5,8 @@
 - 분류: Range Image / Mesh Map 기반 Global Localization
 
 ---
+<img width="770" height="461" alt="image" src="https://github.com/user-attachments/assets/f6a770e1-29d1-473b-85ee-39f04efa2eaa" />
+
 ## Abstract
 
 본 논문은 3D LiDAR scan으로부터 생성한 range image와 triangular mesh 기반 사전 map을 이용하여, 대규모 실외 환경에서 autonomous vehicle 또는 mobile robot의 **global localization**을 수행하는 방법을 제안한다. 기존 LiDAR localization에서 자주 사용되는 point cloud 직접 정합, handcrafted feature, semantic landmark, learning-based observation model 대신, LiDAR scan을 range image로 변환하고, 사전 triangular mesh map에서 각 particle pose에 해당하는 synthetic range image를 렌더링하여 두 range image의 차이를 기반으로 particle likelihood를 계산한다.
