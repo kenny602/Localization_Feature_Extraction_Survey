@@ -84,6 +84,7 @@ WiFi localization의 수평 오차는 반경 약 6 m로 가정하며, 이 정보
 Area Graph는 벽과 passage를 2D polygon으로 표현하므로, 3D LiDAR point cloud도 2D 정합에 적합한 형태로 변환해야 한다.
 AGLoc은 다음 가정을 사용한다.
 > 동일한 azimuth 방향의 수직 LiDAR column에서 가장 멀리 측정된 point는 wall에 도달할 가능성이 높다.
+
 LiDAR scan을 수직 channel 수 \(N\), 수평 방향 수 \(M\)의 행렬로 표현할 때, 각 azimuth\(세로\) column에서 2D 거리 \(\lVert p_{i,j}\rVert\)가 가장 큰 point 하나만 선택한다. 선택된 point는 높이 \(z\)를 제거하여 2D point로 사용한다.
 이를 통해 사람·의자 등 가까운 clutter point를 줄이고, 3D point cloud를 2D로 투영하며, 전체 point 수를 줄여 계산량을 감소시킨다.
 대형 캐비닛처럼 가장 먼 point 자체가 clutter일 수 있으나, 이러한 point는 이후 **section E**의 weight function에서 추가로 억제한다.
