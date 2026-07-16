@@ -85,7 +85,7 @@ Area Graph는 벽과 passage를 2D polygon으로 표현하므로, 3D LiDAR point
 AGLoc은 다음 가정을 사용한다.
 > 동일한 azimuth 방향의 수직 LiDAR column에서 가장 멀리 측정된 point는 wall에 도달할 가능성이 높다.
 
-LiDAR scan을 수직 channel 수 (N), 수평 방향 수 (M)의 행렬 $N×M$로 표현할 때, 각 azimuth(세로) column에서 2D 거리 $(p_{i,j})$가 가장 큰 point 하나만 선택한다. 선택된 point는 높이 $(z)$를 제거하여 2D point로 사용한다.
+LiDAR scan을 수직 channel 수 $(N)$, 수평 방향 수 $(M)$의 행렬 $N×M$로 표현할 때, 각 azimuth(세로) column에서 2D 거리 $(p_{i,j})$가 가장 큰 point 하나만 선택한다. 선택된 point는 높이 $(z)$를 제거하여 2D point로 사용한다.
 이를 통해 사람·의자 등 가까운 clutter point를 줄이고, 3D point cloud를 2D로 투영하며, 전체 point 수를 줄여 계산량을 감소시킨다.
 대형 캐비닛처럼 가장 먼 point 자체가 clutter일 수 있으나, 이러한 point는 이후 **section E**의 weight function에서 추가로 억제한다.
 
@@ -96,7 +96,7 @@ LiDAR scan을 수직 channel 수 (N), 수평 방향 수 (M)의 행렬 $N×M$로 
 <img width="677" height="261" alt="image" src="https://github.com/user-attachments/assets/258136bc-115b-4a44-96b6-4db37763e372" />
 
 C는 독립적인 한 번의 처리 단계라기보다, **주어진 pose에서 LiDAR point와 Area Graph polygon의 관계를 계산하는 공통 연산**이다.
-각 pose에서 2D clutter-free point (p_j) 방향으로 ray를 생성하고, 현재 area의 Area Graph polygon과 교차하는 지점 (i_j)를 계산한다. 또한 (p_j)에서 polygon까지 가장 가까운 점을 (c_j)라 하면 signed distance (sd_j)는 다음과 같이 정의된다.
+각 pose에서 2D clutter-free point $(p_j)$ 방향으로 ray를 생성하고, 현재 area의 Area Graph polygon과 교차하는 지점 $(i_j)$를 계산한다. 또한 $(p_j)$에서 polygon까지 가장 가까운 점을 $(c_j)$라 하면 signed distance $(sd_j)$는 다음과 같이 정의된다.
 
 ```math
 sd_j=\lVert p_j-c_j\rVert
@@ -137,7 +137,7 @@ G는 pose 후보의 집합이다.
 
 #### Nearby Error (E_1)
 
-Polygon과 가까운 point의 signed distance를 오차로 사용하고, 임계값 (d=0.8\text{ m})를 초과하는 point에는 고정 penalty를 부여한다.
+Polygon과 가까운 point의 signed distance를 오차로 사용하고, 임계값(threshold) $(d=0.8\text{ m}$)를 초과하는 point에는 고정 penalty를 부여한다.
 
 
 ```math
@@ -234,15 +234,15 @@ R\in\mathbb{R}^{2\times2},
 \qquad
 t\in\mathbb{R}^{2}
 ```
-여기서 $(\pi(p_j,R,t))$는 pose $((R,t))$로 변환한 LiDAR point와 대응 Area Graph polygon segment 사이의 signed distance를 의미한다.
-즉 C에서 계산한 point-to-line residual에 E의 weight를 적용하고, 전체 weighted squared residual이 최소가 되도록 (R,t)를 보정한다. Pose가 갱신되면 correspondence와 signed distance를 다시 계산하며, 이 과정을 수렴할 때까지 반복한다.
+여기서 $(\pi(p_j,R,t))$는 pose $(R,t)$로 변환한 LiDAR point와 대응 Area Graph polygon segment 사이의 signed distance를 의미한다.
+즉 C에서 계산한 point-to-line residual에 E의 weight를 적용하고, 전체 weighted squared residual이 최소가 되도록 $(R,t)$를 보정한다. Pose가 갱신되면 correspondence와 signed distance를 다시 계산하며, 이 과정을 수렴할 때까지 반복한다.
 
 ---
 
 ### G. Corridorness Downsampling
 
 긴 복도나 한쪽 wall만 주로 관측되는 환경에서는 많은 LiDAR point가 동일한 방향의 평행한 polygon segment에 대응한다. 이 경우 wall과 수직인 위치는 보정할 수 있지만, wall을 따라가는 방향의 위치 정보가 부족하여 ICP가 초기 위치에 머물 수 있다.
-이를 완화하기 위해 현재 scan point들이 대응된 Area Graph polygon segment의 orientation을 (5^\circ) 간격의 histogram에 누적한다. 선분 orientation은 (180^\circ) 주기를 가지므로 총 36개의 bin을 사용한다. ( 식참고 )
+이를 완화하기 위해 현재 scan point들이 대응된 Area Graph polygon segment의 orientation을 $(5^\circ)$ 간격의 histogram에 누적한다. 선분 orientation은 $(180^\circ)$ 주기를 가지므로 총 36개의 bin을 사용한다. ( 식참고 )
 ```math
 0^\circ\le\theta<180^\circ
 ```
