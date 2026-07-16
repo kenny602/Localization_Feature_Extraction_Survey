@@ -1,4 +1,4 @@
-<img width="843" height="635" alt="image" src="https://github.com/user-attachments/assets/a7f51f2a-0ff3-4c16-851d-442137c7b025" /># Robust Lifelong Indoor LiDAR Localization Using the Area Graph (AGLoc)
+# Robust Lifelong Indoor LiDAR Localization Using the Area Graph
 
 - **저자**: Fujing Xie, Sören Schwertfeger
 - **게재처**: IEEE Robotics and Automation Letters 9(1) (2024) 531–538
