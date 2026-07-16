@@ -266,11 +266,14 @@ Cor=\frac{N_{\max}}{N_m}
 가장 많은 point가 들어간 dominant orientation에만 다음 downsample rate를 적용한다.
 
 ```math
-R_{\mathrm{cor}}=
-\begin{cases}
-1, & 0<Cor\le0.5 \\
-10Cor-4, & 0.5<Cor\le1
-\end{cases}
+R_{\mathrm{cor}}
+=
+\left\{
+\begin{array}{ll}
+1, & 0 < Cor \le 0.5, \\[4pt]
+10Cor - 4, & 0.5 < Cor \le 1
+\end{array}
+\right.
 ```
 - $(Cor\le0.5)$: 특정 방향의 지배가 크지 않으므로 downsampling하지 않음
 - $(Cor>0.5)$: 한 방향으로 편중될수록 dominant orientation point를 더 많이 감소
