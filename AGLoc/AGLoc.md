@@ -197,7 +197,7 @@ Global localization 이후에는 weighted point-to-line ICP를 이용하여 pose
 \sigma=
 \min_{R,t}
 \sum_{j=1}^{M}
-W\left(\pi(p_j,R,t)\right)
+W\left(\pi(p_j,R,t)\right) X
 \left\|\pi(p_j,R,t)\right\|^2
 ```
 여기서 회전행렬과 평행이동 벡터는 다음과 같다.
